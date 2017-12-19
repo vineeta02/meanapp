@@ -2,6 +2,7 @@
 Find and plot locations on map
 
 Instructions to run locally
+
 1.Clone repository and download npm packages
 
 https://github.com/vineeta02/meanapp.git
