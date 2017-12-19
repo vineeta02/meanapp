@@ -1,0 +1,22 @@
+{
+  "name": "mapapp",
+  "version": "1.0.0",
+  "description": "Map app",
+  "main": "app.js",
+  "dependencies": {
+    "@angular/cli": "^1.6.0",
+    "body-parser": "~1.5.2",
+    "cors": "^2.8.4",
+    "express": "~4.7.2",
+    "jsonwebtoken": "^5.0.2",
+    "method-override": "~2.1.2",
+    "mongoose": "~4.1.0",
+    "morgan": "~1.2.2",
+    "nodemon": "^1.12.5"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "vineeta bedi",
+  "license": "ISC"
+}
