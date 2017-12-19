@@ -62,7 +62,7 @@ module.exports = function(app) {
         });
     });
 
-    app.put('places/:id',function(req, res){
+    app.put('/places/:id',function(req, res){
     	Places.findOneAndUpdate({ 
     		_id:req.params.id },req.body,{ new:true },
     			function(err,places){
@@ -75,9 +75,14 @@ module.exports = function(app) {
     app.get('/get_nearby_places',function(req, res){
     	location = req.query.location
     	distance = req.query.distance
-		var query = Places.find(
-   			{ "location" : { $near : location, $maxDistance: distance  } }
-		)
+		// var query = Places.find(
+  //  			{ "location" : { $near : location, $maxDistance: distance  } }
+		// )
+        var query = Places.find(
+                { "location" :
+                    { $geoWithin:
+                        { $centerSphere: [ location , distance / 6378.1 ] } } }
+                )
 	        query.exec(function(err, places){
 	            if(err)
 	                res.send(err);

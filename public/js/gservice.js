@@ -9,6 +9,7 @@ angular.module('gservice', [])
         // Default selected Location 
         var selectedLat = 39.50;
         var selectedLong = -98.35;
+        var distance = 50; //50km;
 
         // Functions
         // --------------------------------------------------------------
@@ -23,7 +24,7 @@ angular.module('gservice', [])
 
             // Perform an AJAX call based on get_nearby_locations parameter
             if(get_nearby_locations)
-                url = '/get_nearby_places?location='+selectedLong+"&location="+selectedLat+"&distance=5000"
+                url = '/get_nearby_places?location='+selectedLong+"&location="+selectedLat+"&distance="+distance
             else
                 url = "/places/?location="+selectedLong+"&location="+selectedLat
             $http.get(url).then(function(response){

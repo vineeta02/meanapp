@@ -24,7 +24,6 @@ PlacesSchema.pre('save', function(next){
     next();
 });
 
-PlacesSchema.index({location: '2d'});
+PlacesSchema.index({location: '2dsphere'});
 
-// Exports the UserSchema for use elsewhere. Sets the MongoDB collection to be used as: "scotch-users"
 module.exports = mongoose.model('places', PlacesSchema);
