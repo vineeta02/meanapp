@@ -1,0 +1,25 @@
+{
+  "name": "mapapp",
+  "description": "Map app",
+  "main": "app.js",
+  "authors": [
+    "vineeta bedi"
+  ],
+  "license": "ISC",
+  "homepage": "index.html",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.6.7",
+    "angular-google-places-autocomplete": "^0.2.7",
+    "angular-route": "^1.6.7",
+    "angularjs-geolocation": "^0.1.1",
+    "bootstrap": "^3.3.7"
+  }
+}
